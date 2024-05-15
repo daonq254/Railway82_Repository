@@ -1,0 +1,33 @@
+Đạo
+1. Viettel
+Java
+
+2. VTI Academy
+Mentor:
+Deploy: 
+Cloud: AWS,...
+
+
+pv tuyển dụng mentor
+Phát triển các khóa học
+
+
+-- ReactJS(17 buổi+ 1 buổi thi)
+1. TypeScript
+   JavaScript Extra
+   4-5Buổi
+
+2. ReactJS
+   còn lại	
+
+Thi:
+Project(vừa): ReactJS
+PV
+
+git clone https://github.com/daonq254/Railway82_Repository.git
+
+git add .
+git commit -m "new code!"
+git push
+
+
