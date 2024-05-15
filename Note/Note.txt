@@ -31,3 +31,63 @@ git commit -m "new code!"
 git push
 
 
+-- 
+HTML
+CSS
+JavaScript
+
+Typescript: 
+   Không phải là 1 ngôn mới.
+   Nó chỉ 1 phiên bản mở rộng của JavaScript.
+
+ Hạn chế JavaScript?
+ #Bảo mật
+ #Quản lý bộ nhớ
+    var myName ="DaoNQ";  -- JavaScript
+    String myName = "DaoNQ"; -- Java
+
+    class   ==> intstance -- Java
+
+    -- JavaScript
+    var account1 = {
+        id:1,
+        name:"daonq",
+        address:"HN"
+    };
+        var account2 = {
+        id_num :1,
+        name: "daonq",
+        address: "HN"
+    }
+
+
+==> Typescript bản nâng cấp JavaScript
+    Chặt chẽ hơn
+    OOP 
+    Lập trình viên
+    TypeScript không chạy trực tiếp trên trình duyệt được
+
+
+-- Cài đặt
+Cài đặt Node Server:  https://nodejs.org/
+Kiểm tra phiên bản Node: node -v
+
+Cài đặt TypeScript: npm install -g typescript
+Kiểm tra phiên bản TypeScript vừa cài đăt: tsc --version
+
+
+-- Demo 1
+Viết 1 chương trình TypeScript: In ra dòng chữ "Hello VTI"
+Tạo file code Demo1.ts
+Chạy file code
+    1. Biên dịch file code ts ==> Js
+        cd  'D:\Railway82_Repository\1. TypeScritp + JS Extra\Demo 1'
+        ls: Hiển thị danh sách file có trong thư mục
+        tsc tên_file.ts (chú ý ghi 1 số chữ đầu của tên file sau đó dùng phím tab)
+    2. Chạy 
+        node tên_file.js
+
+Fix: 
+    1. Mở cmd, sau đó chạy lênh:
+        Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted
+    2. Mở VS Code để chạy chương trình xem đc chưa. ==> Nhờ tutor hỗ trợ
