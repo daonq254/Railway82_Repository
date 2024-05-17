@@ -1,17 +1,15 @@
-Đạo
+--------- Buổi 1 ---------
+---- Thông tin
+Mentor: Đạo
 1. Viettel
-Java
-
 2. VTI Academy
-Mentor:
-Deploy: 
-Cloud: AWS,...
+    Mentor:
+    Deploy: 
+    Cloud: AWS,...
+    pv tuyển dụng mentor
+    Phát triển các khóa học
 
-
-pv tuyển dụng mentor
-Phát triển các khóa học
-
-
+---- Khung chương trình
 -- ReactJS(17 buổi+ 1 buổi thi)
 1. TypeScript
    JavaScript Extra
@@ -24,12 +22,11 @@ Thi:
 Project(vừa): ReactJS
 PV
 
+---- Sử dụng Git lưu trữ Source Code
 git clone https://github.com/daonq254/Railway82_Repository.git
-
 git add .
 git commit -m "new code!"
 git push
-
 
 -- 
 HTML
@@ -68,7 +65,7 @@ Typescript:
     TypeScript không chạy trực tiếp trên trình duyệt được
 
 
--- Cài đặt
+-- Cài đặt công cụ
 Cài đặt Node Server:  https://nodejs.org/
 Kiểm tra phiên bản Node: node -v
 
@@ -91,3 +88,44 @@ Fix:
     1. Mở cmd, sau đó chạy lênh:
         Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted
     2. Mở VS Code để chạy chương trình xem đc chưa. ==> Nhờ tutor hỗ trợ
+
+ --------- Buổi 2 ---------   
+-- Cộng chuỗi:
+    console.log("Hello" + v_name + "!!!!!!!");
+    Template String
+        console.log(`Hello ${v_name} !!!....`);
+        (`... ${}  ... `)
+
+-- Demo OOP Trong TypeScript
+    Quản lý 1 số bạn trong lớp: id, name, address
+    Lưu thông tin các bạn
+    Hiển thị thông tin của 1 vài bạn học viên
+
+    Class Person
+	id
+	name
+	address
+
+        ==> instance
+        person1
+        person2
+
+    In thông tin các bạn ra màn hình.
+
+-- Cấu trúc Export, Import  
+Exprort:
+    1. export theo tên: export class Person 
+    2. export {...,...}
+    3. export default: trong 1 file chỉ có 1 lần đc export default
+
+Tool: Typescript Toolbox: Ctrl + Shift + P
+
+-- Bài tập
+Dựa vào bảng dữ liệu trong DB Testing System
+    Account
+    Department
+    Positon
+    Hãy tạo 1 chương trình viết bằng TypeScript
+    1. Tạo các class: Department, Account, Position(contructor, getter, setter)
+    2. Thực hiện tạo mới các instance từ các class bên trên, sử dụng mảng để lưu trữ nhiều dữ liệu
+    3. thực hiện in thông tin các instance bên trên. Sử dụng vòng lặp để in thông tin
