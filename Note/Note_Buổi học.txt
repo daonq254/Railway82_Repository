@@ -195,3 +195,50 @@ Code Bất đồng bộ
 
 ==> Xử lý code bất đồng bộ  
 ==> Callback hell   ==> không mong muốn
+
+    1. Promise
+    2. Asyn Await
+
+
+REACTJS
+--------- Buổi 5 ---------
+Tạo dự án ReactJS đầu tiên
+    Thực hiện cài đặt công cụ giúp tạo cấu trúc dự án: create-react-app (npm install -g create-react-app)
+    Sử dụng công cụ create-react-app để tạo dự án ReactJS: create-react-app demo1
+
+    Thực hiện chạy dự án: npm start
+
+Phân chia giao diện
+Component:
+    Cấu trúc của 1 Component:
+        import "./App.css";
+
+                function App() {
+                // 
+                return (
+                    <div className="App">
+                    <h4> Hello VTI</h4>
+                    </div>
+                );
+                }
+
+                export default App;
+    ==> Export
+    Sử dụng component thực hiện Import:  <Tên Component/>
+
+Mã JSX:(Không phải mã HTML)
+        <div className="App">
+            <h4> Hello VTI</h4>
+            <h5>My Name Is DAONQ</h5>
+        </div>
+
+Mã Non JSX
+
+CSS cho các Component
+ Cách 1: CSS trong các thẻ JSX:
+    style={{ backgroundColor: "blue", width: "200px", height: "100px" }}
+    background-color
+    backgroundColor
+ Cách 2: Tách thành 1 biến riêng
+
+ Cách 3: Tạo file .css riêng và Import để sử dụng

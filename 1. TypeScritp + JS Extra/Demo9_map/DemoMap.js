@@ -10,7 +10,7 @@ var numArr = [1, 3, 4, 7, 9];
 // console.log(numArr_New);
 // Sử dụng vòng map
 var numArr_New = numArr.map(function (number, index) {
-    //   let number_new = number + 4;
-    return number + 4;
+  //   let number_new = number + 4;
+  return number + 4;
 });
 console.log(numArr_New);
