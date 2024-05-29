@@ -233,6 +233,11 @@ Mã JSX:(Không phải mã HTML)
         </div>
 
 Mã Non JSX
+    React.createElement(
+        "div",
+        null,
+        React.createElement("h1", null, "HELLO VTI")
+    );
 
 CSS cho các Component
  Cách 1: CSS trong các thẻ JSX:
@@ -242,3 +247,65 @@ CSS cho các Component
  Cách 2: Tách thành 1 biến riêng
 
  Cách 3: Tạo file .css riêng và Import để sử dụng
+
+--------- Buổi 5 ---------
+Xử lý sự kiện trong ReactJS
+    Bắt sự kiện: 
+         onClick={handleClick}
+    Hàm xử lý sự kiện: Viết dưới dạng Arror Function
+          let handleClick = () => {
+                alert("Hello DAONQ!");
+            };
+
+
+Cài đặt thêm Extension để tạo nhanh Component
+    Trong ReactJS cung cấp cho bạn 2 cách để tạo Component
+    Cách 1: Sử dụng Function Component
+         Gõ phím tắt rsf để tạo nhanh Function Component
+         import React from "react";
+
+        function Banner(props) {
+        return (
+            <div>
+            <h1>This is banner</h1>
+            </div>
+        );
+        }
+
+        export default Banner;
+    
+    Cách 2: Sử dụng Class Component
+        Gõ phím tắt rcc để tạo nhanh Class Component
+        // rcc
+    import React, { Component } from "react";
+
+        class Content1 extends Component {
+        // Hàm render
+        render() {
+            return (
+            <div>
+
+                <h2>This is Content1</h2>
+            </div>
+            );
+        }
+        }
+
+        export default Content1;
+
+
+Cài đặt công cụ Fomat Code: Prettier - Code formatter
+
+Hướng dẫn sử dụng Bootstrap 3 
+    Cài đặt công cụ: Bootstrap 3 Snippets
+    Import thư viện Bootstrap vào sử dụng: bs3-cdn
+        <link rel="stylesheet" media="screen" href="//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <script src="//code.jquery.com/jquery.js"></script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+
+    Sử dụng các thành phần có sẵn
+    Xây dựng layout trang web
+
+   
+
