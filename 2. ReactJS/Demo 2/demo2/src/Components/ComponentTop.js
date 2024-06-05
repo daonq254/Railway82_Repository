@@ -16,11 +16,13 @@ class ComponentTop extends Component {
     // this.clickNumber = this.clickNumber + 1;
     // console.log("clickNumber: ", this.clickNumber);
     // let x = this.state.click_Number;
-    this.setState({
-      click_Number: this.state.click_Number + 1,
-    });
-
-    console.log("click_Number: ", this.state.click_Number);
+    // this.setState({
+    //   click_Number: this.state.click_Number + 1,
+    // });
+    // console.log("click_Number: ", this.state.click_Number);
+    // Khai báo 1 dữ liệu bất kỳ
+    let myNameVTI = "DAONQ VTI Academy!!! ";
+    this.props.prop_getDataFromTop(myNameVTI);
   };
   // render
   render() {
