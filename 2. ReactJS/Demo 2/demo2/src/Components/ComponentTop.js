@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ComponetTopChild from "./ComponetTopChild";
 
 class ComponentTop extends Component {
   // Khai báo hàm contructor
@@ -30,7 +31,13 @@ class ComponentTop extends Component {
     // let prop_dataFromAppToTop = this.props.prop_dataFromAppToTop; // "DAONQ VTI Academy"
     // let prop_headingTop = this.props.prop_headingTop;
     // ... Destructuring
-    let { prop_dataFromAppToTop, prop_headingTop, prop_myName } = this.props;
+    let {
+      prop_dataFromAppToTop,
+      prop_headingTop,
+      prop_myName,
+      prop_dataTopToBottom,
+      prop_datafromAppToTopChild,
+    } = this.props;
     //
     console.log("prop_dataFromAppToTop: ", prop_dataFromAppToTop);
     console.log("prop_headingTop: ", prop_headingTop);
@@ -65,6 +72,11 @@ class ComponentTop extends Component {
                 </div>
               </div>
             </div>
+          </div>
+          <div>
+            <ComponetTopChild
+              prop_datafromAppToTopChild={prop_datafromAppToTopChild}
+            />
           </div>
           {/*  */}
         </div>

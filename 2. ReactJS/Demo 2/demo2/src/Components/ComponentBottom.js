@@ -1,11 +1,17 @@
 // rsf
 import React from "react";
+import ComponentBottomChild from "./ComponentBottomChild";
 
 function ComponentBottom(props) {
   //
   // let prop_headingBottom = props.prop_headingBottom;
   // Destructuring
-  let { prop_headingBottom, prop_other, prop_dataTopToBottom } = props;
+  let {
+    prop_headingBottom,
+    prop_other,
+    prop_dataTopToBottom,
+    prop_datafromAppToBottomChild,
+  } = props;
   console.log("prop_headingBottom: ", prop_headingBottom);
   //
 
@@ -36,6 +42,10 @@ function ComponentBottom(props) {
             Sent Data To App
           </button>
         </div>
+        {/*  */}
+        <ComponentBottomChild
+          prop_datafromAppToBottomChild={prop_datafromAppToBottomChild}
+        />
       </div>
     </div>
   );

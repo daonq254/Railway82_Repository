@@ -354,3 +354,5 @@ Phương pháp: sử dụng hàm Callback
         rcc ==> tạo cấu trúc Class Component
         lưu ý khi khai báo các hàm, biến trong class Compoennt ==> khi gọi chú ý thêm từ khóa this
     
+3. Truyền giữa liệu qua nhiều tầng
+    Sử dụng Props để truyền lần lượt qua từng tầng

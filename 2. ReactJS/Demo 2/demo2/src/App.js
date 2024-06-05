@@ -60,6 +60,9 @@ class App extends Component {
   dataFromAppToTop = "DAONQ VTI Academy";
   headingTop = "-- Component TOP APP  --";
   headingBottom = "-- Component Bottom  -- ";
+  datafromAppToTopChild = "HELLO TOPCHILD!!";
+
+  datafromAppToBottomChild = "HELLO BottomChild !!";
   // Tạo biến để lưu trữ dữ liệu nhận đc từ Top
   // dataTopToBottom = "";
   // Khai báo hàm getDataFromTop
@@ -90,6 +93,7 @@ class App extends Component {
           prop_headingTop={this.headingTop}
           prop_myName="Daonq"
           prop_getDataFromTop={this.getDataFromTop}
+          prop_datafromAppToTopChild={this.datafromAppToTopChild}
         />
         <br />
         <br />
@@ -98,6 +102,7 @@ class App extends Component {
           prop_other="123"
           prop_getDataFromBottom={this.getDataFromBottom}
           prop_dataTopToBottom={this.state.dataTopToBottom}
+          prop_datafromAppToBottomChild={this.datafromAppToBottomChild}
         />
       </div>
     );
