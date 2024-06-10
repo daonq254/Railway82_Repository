@@ -31,9 +31,13 @@ function ComponentBottom(props) {
             <h3 className="panel-title">{prop_headingBottom}</h3>
           </div>
           <div className="panel-body">
-            <textarea className="form-control" rows="5" />
+            <textarea
+              className="form-control"
+              rows="5"
+              value={prop_dataTopToBottom}
+            />
           </div>
-
+          prop_dataTopToBottom
           <button
             type="button"
             class="btn btn-success"
