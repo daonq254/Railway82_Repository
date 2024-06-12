@@ -35,6 +35,7 @@ class LifeCycleDemo extends Component {
   componentDidUpdate() {
     console.log("Hàm componentDidUpdate được gọi");
   }
+  //
 }
 
 export default LifeCycleDemo;

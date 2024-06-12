@@ -394,4 +394,33 @@ Phương pháp: sử dụng hàm Callback
     Demo:
         Bước 1: Tạo ra dự án ReactJS
         Bước 2: Tạo ra 1 component nào đấy: LifeCycleDemo
-        Bước 3: Xem các quá trình của Compoennt trên giao diện
+        Bước 3: Xem các quá trình của Component trên giao diện
+
+--------- Buổi 9   ---------
+1. Hook
+    Class Compoennt: State, LifeCycle
+    Function Compoennt ==> hook
+        state ==> hook: useState()
+              const [tên State, Tên hàm Set lại giá trị cho State] = useState(Giá trị khởi tạo cho State);
+              Thay đổi giá trị State: theo Tên hàm khai báo
+        LifeCycle Class Component ==> hook useEffect()
+            useEffect(function,[Dependency])
+            useEffect(() => {
+                console.log("Bạn vừa gọi tới đoạn Code1 trong userEffect");
+                }); ==> tương đương với compoentDidMount, compoentDidUpdate trong Class Compoennt
+
+            useEffect(() => {
+                    console.log("Bạn vừa gọi tới đoạn Code1 trong userEffect");
+                }, []); ==> tương đương với compoentDidMount trong Class Compoennt
+
+            useEffect(() => {
+                    console.log("Bạn vừa gọi tới đoạn Code1 trong userEffect");
+                }, [Count1]); ==> tương đương với compoentDidMount và khi State Count1 thì sẽ gọi lại useEffect()
+
+            useEffect(() => {
+                //
+                return () => {
+                console.log("Đoạn code tương đương với ComponentWillUnmount");
+                }; ==> tương đương với ComponentWillUnmount trong Class Compoennt
+            });
+        ...  
