@@ -405,6 +405,7 @@ Phương pháp: sử dụng hàm Callback
               Thay đổi giá trị State: theo Tên hàm khai báo
         LifeCycle Class Component ==> hook useEffect()
             useEffect(function,[Dependency])
+            
             useEffect(() => {
                 console.log("Bạn vừa gọi tới đoạn Code1 trong userEffect");
                 }); ==> tương đương với compoentDidMount, compoentDidUpdate trong Class Compoennt
