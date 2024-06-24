@@ -3,7 +3,13 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 import InputForm from "./InputForm";
 
 function ModalCreateNewAccount(props) {
-  let { showForm, onHandleCloseModal, onHandleCreateNewAccount } = props;
+  let {
+    showForm,
+    onHandleCloseModal,
+    onHandleCreateNewAccount,
+    listDepartment,
+    listPosition,
+  } = props;
 
   //
   let handleClose = () => {
@@ -16,7 +22,11 @@ function ModalCreateNewAccount(props) {
           <h3>Create New Account</h3>
         </ModalHeader>
         <ModalBody>
-          <InputForm onHandleCreateNewAccount={onHandleCreateNewAccount} />
+          <InputForm
+            onHandleCreateNewAccount={onHandleCreateNewAccount}
+            listDepartment={listDepartment}
+            listPosition={listPosition}
+          />
         </ModalBody>
         <ModalFooter>
           <Button color="danger" onClick={handleClose}>

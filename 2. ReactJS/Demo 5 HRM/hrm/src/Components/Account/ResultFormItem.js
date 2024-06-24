@@ -12,7 +12,7 @@ function ResultFormItem(props) {
         <td>{account.username}</td>
         <td>{account.fullname}</td>
         <td>{account.department}</td>
-        <td>{account.postion}</td>
+        <td>{account.position}</td>
         <td>{account.createDate}</td>
         <td>
           <Button color="warning">Edit</Button>
