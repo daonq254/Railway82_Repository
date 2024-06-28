@@ -425,3 +425,20 @@ Phương pháp: sử dụng hàm Callback
                 }; ==> tương đương với ComponentWillUnmount trong Class Compoennt
             });
         ...  
+
+--------- Buổi 14   ---------
+React Router
+Kỹ thuật SPA: Single Page Application: Hệ thống được build trên 1 trang html duy nhất
+
+- Sử dụng thư viện React Router
+    Cài đặt thư viện: npm install react-router-dom
+    Thẻ BrowserRouter: Bao bọc dự án(Bọc App)
+        import { BrowserRouter } from 'react-router-dom';
+         <BrowserRouter> 
+      <App />
+    </BrowserRouter>
+    Routes: Khai báo bảng định tuyến trong dự án
+    Route: Khai báo các tuyến trong dự án, mỗi tuyến có đường dẫn và Component được hiển thị
+    Link: Chuyển tới đường dẫn tương ứng
+    NavLink: Tự động thêm class .active vào menu item được chọn
+
