@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 function AccountManagement(props) {
   // Khai báo State ListAccount để lưu trữ danh sách Account trong chương trinh
@@ -46,10 +47,13 @@ function AccountManagement(props) {
 
   // Hiển thị danh sách Account đang có trên hệ thống
   let trItems = listAccounts.map((account, index) => {
+    let urlAccountDetail = "/accountdetail/" + account.ID;
     return (
       <tr>
         <td>{account.ID}</td>
-        <td>{account.Email}</td>
+        <td>
+          <Link to={urlAccountDetail}>{account.Email} </Link>
+        </td>
       </tr>
     );
   });

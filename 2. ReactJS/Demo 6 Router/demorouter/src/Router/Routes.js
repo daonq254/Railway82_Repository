@@ -6,6 +6,7 @@ import DepartmentManagement from "../Pages/DepartmentManagement";
 import SignUp from "../Pages/SignUp";
 import Login from "../Pages/Login";
 import Error from "./../Pages/Error";
+import AccountDetail from "../Pages/AccountDetail";
 
 export const routes = (
   <Routes>
@@ -19,6 +20,7 @@ export const routes = (
     <Route path="/departmentmanagement" element={<DepartmentManagement />} />
     <Route path="/signup" element={<SignUp />} />
     <Route path="/login" element={<Login />} />
+    <Route path="/accountdetail/:id" element={<AccountDetail />} />
     <Route path="*" element={<Error />} />
   </Routes>
 );

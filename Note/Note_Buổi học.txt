@@ -442,3 +442,7 @@ Kỹ thuật SPA: Single Page Application: Hệ thống được build trên 1 t
     Link: Chuyển tới đường dẫn tương ứng
     NavLink: Tự động thêm class .active vào menu item được chọn
 
+
+--------- Buổi 15   ---------
+Redux: Quản lý các State trong dự án
+Cài đặt thư viện
