@@ -1,4 +1,4 @@
-import { createStore } from "redux";
+// import { createStore } from "redux";
 import {
   ADD_ACCOUNT,
   CLOSE_INPUT_FORM,
@@ -8,7 +8,7 @@ import {
 
 import { actionCloseForm, actionShowForm } from "./Actions/FormAction";
 import { actionAddAccount, actionDeleteAccount } from "./Actions/AccountAction";
-import rootReducer from "./Reducers/rootReducer";
+// import rootReducer from "./Reducers/rootReducer";
 import { store } from "./Store/StoreRedux";
 //
 // const SHOW_INPUT_FORM = "SHOW_INPUT_FORM";

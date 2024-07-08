@@ -6,13 +6,17 @@ import Axios from "axios";
 import { createNewAccountAPI, getListAccountAPI } from "../API/AccountApi";
 import { getListDepartmentAPI } from "../API/Department";
 import { getListPositionAPI } from "../API/PositionAPI";
+import { useDispatch } from "react-redux";
+import { actionCloseForm, actionShowForm } from "../Redux/Actions/FormAction";
 
 function AccountContainer(props) {
   // Khai báo state showForm để quản lý ẩn hiện của Modal
   let [showForm, setShowForm] = useState(false);
   // Khai báo State ListAccount để quản lý danh sách Account đang có trên hệ thống
   let [listAccount, setListAccount] = useState([]);
+  //
 
+  let dispatchRedux = useDispatch();
   // Khai báo State để quản lý danh sách Department trên hệ thống
   let [listDepartment, setListDepartment] = useState([]);
   // Khai báo State để quản lý danh sách Position trên hệ thống
@@ -21,12 +25,14 @@ function AccountContainer(props) {
   // Khai báo hàm callback để hiển thị modal
   let onHandleCreateButton = () => {
     // console.log("CLICK");
-    setShowForm(true);
+    // setShowForm(true);
+    dispatchRedux(actionShowForm());
   };
   // Khai báo hàm callback để đóng Modal
   let onHandleCloseModal = () => {
     //
-    setShowForm(false);
+    // setShowForm(false);
+    dispatchRedux(actionCloseForm());
   };
   // Khai báo hàm callback để tạo mới Account
   let onHandleCreateNewAccount = (account_New) => {
