@@ -9,6 +9,8 @@ import { getListPositionAPI } from "../API/PositionAPI";
 import { useDispatch } from "react-redux";
 import { actionCloseForm, actionShowForm } from "../Redux/Actions/FormAction";
 import { actionFetchListAccoutAPI } from "./../Redux/Actions/AccountAction";
+import { actionFetchListDepartmentAPI } from "../Redux/Actions/DepartmentAction";
+import { actionFetchListPositionAPI } from "../Redux/Actions/PositionAction";
 
 function AccountContainer(props) {
   // Khai báo state showForm để quản lý ẩn hiện của Modal
@@ -19,9 +21,9 @@ function AccountContainer(props) {
 
   let dispatchRedux = useDispatch();
   // Khai báo State để quản lý danh sách Department trên hệ thống
-  let [listDepartment, setListDepartment] = useState([]);
+  // let [listDepartment, setListDepartment] = useState([]);
   // Khai báo State để quản lý danh sách Position trên hệ thống
-  let [listPosition, setListPosition] = useState([]);
+  // let [listPosition, setListPosition] = useState([]);
 
   // Khai báo hàm callback để hiển thị modal
   let onHandleCreateButton = () => {
@@ -102,13 +104,17 @@ function AccountContainer(props) {
     // Load dữ liệu từ API và đưa listAccount đang quản lý trong Redux?
     dispatchRedux(actionFetchListAccoutAPI());
     //
-    getListDepartmentAPI().then((res) => {
-      setListDepartment(res);
-    });
+    // getListDepartmentAPI().then((res) => {
+    //   setListDepartment(res);
+    // });
 
-    getListPositionAPI().then((res) => {
-      setListPosition(res);
-    });
+    dispatchRedux(actionFetchListDepartmentAPI());
+
+    // getListPositionAPI().then((res) => {
+    //   setListPosition(res);
+    // });
+
+    dispatchRedux(actionFetchListPositionAPI());
   }, []);
 
   return (
@@ -118,8 +124,8 @@ function AccountContainer(props) {
         // showForm={showForm}
         onHandleCloseModal={onHandleCloseModal}
         onHandleCreateNewAccount={onHandleCreateNewAccount}
-        listDepartment={listDepartment}
-        listPosition={listPosition}
+        // listDepartment={listDepartment}
+        // listPosition={listPosition}
       />
       <br /> <br />
       <ResutlForm listAccount={listAccount} />

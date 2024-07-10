@@ -8,8 +8,8 @@ function ModalCreateNewAccount(props) {
     showForm,
     onHandleCloseModal,
     onHandleCreateNewAccount,
-    listDepartment,
-    listPosition,
+    // listDepartment,
+    // listPosition,
   } = props;
 
   //
@@ -30,8 +30,8 @@ function ModalCreateNewAccount(props) {
         <ModalBody>
           <InputForm
             onHandleCreateNewAccount={onHandleCreateNewAccount}
-            listDepartment={listDepartment}
-            listPosition={listPosition}
+            // listDepartment={listDepartment}
+            // listPosition={listPosition}
           />
         </ModalBody>
         <ModalFooter>

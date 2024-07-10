@@ -1,9 +1,13 @@
 import React, { useState } from "react";
+import { useSelector } from "react-redux";
 import { Button, Form, FormGroup, Label, Input } from "reactstrap";
 
 function InputForm(props) {
   //
-  let { onHandleCreateNewAccount, listDepartment, listPosition } = props;
+  let {
+    onHandleCreateNewAccount,
+    // , listDepartment, listPosition
+  } = props;
   // Khai báo state lưu dữ liệu cho các ô nhập liệu
   let [Email, setEmail] = useState("");
   let [Username, SetUsername] = useState("");
@@ -40,17 +44,24 @@ function InputForm(props) {
     onHandleCreateNewAccount(accountNew);
   };
   //
-  let departmentItems = listDepartment.map((dep, index) => {
+  let stateRedux = useSelector((state) => state);
+  let listDepartmentRedux = stateRedux.department_root.listDepartment;
+  // let departmentItems = "";
+  let departmentItems = listDepartmentRedux.map((dep, index) => {
     return <option value={dep.id}>{dep.name}</option>;
   });
   //
-  let positionItem = listPosition.map((position, index) => {
+  let listPositionRedux = stateRedux.positon_root.listPosition;
+
+  let positionItem = listPositionRedux.map((position, index) => {
     return (
       <option value={position.id} key={index}>
         {position.name}
       </option>
     );
   });
+
+  // let positionItem = "";
 
   return (
     <>
