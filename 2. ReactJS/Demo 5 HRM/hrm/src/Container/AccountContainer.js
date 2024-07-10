@@ -8,10 +8,11 @@ import { getListDepartmentAPI } from "../API/Department";
 import { getListPositionAPI } from "../API/PositionAPI";
 import { useDispatch } from "react-redux";
 import { actionCloseForm, actionShowForm } from "../Redux/Actions/FormAction";
+import { actionFetchListAccoutAPI } from "./../Redux/Actions/AccountAction";
 
 function AccountContainer(props) {
   // Khai báo state showForm để quản lý ẩn hiện của Modal
-  let [showForm, setShowForm] = useState(false);
+  // let [showForm, setShowForm] = useState(false);
   // Khai báo State ListAccount để quản lý danh sách Account đang có trên hệ thống
   let [listAccount, setListAccount] = useState([]);
   //
@@ -49,7 +50,7 @@ function AccountContainer(props) {
         setListAccount(res);
       });
     });
-    setShowForm(false);
+    // setShowForm(false);
   };
 
   //
@@ -95,10 +96,12 @@ function AccountContainer(props) {
     // fetchListDepartment();
     // fetchListPosition();
 
-    getListAccountAPI().then((res) => {
-      setListAccount(res);
-    });
-
+    // getListAccountAPI().then((res) => {
+    //   setListAccount(res);
+    // });
+    // Load dữ liệu từ API và đưa listAccount đang quản lý trong Redux?
+    dispatchRedux(actionFetchListAccoutAPI());
+    //
     getListDepartmentAPI().then((res) => {
       setListDepartment(res);
     });
@@ -112,7 +115,7 @@ function AccountContainer(props) {
     <>
       <CreateButton onHandleCreateButton={onHandleCreateButton} />
       <ModalCreateNewAccount
-        showForm={showForm}
+        // showForm={showForm}
         onHandleCloseModal={onHandleCloseModal}
         onHandleCreateNewAccount={onHandleCreateNewAccount}
         listDepartment={listDepartment}

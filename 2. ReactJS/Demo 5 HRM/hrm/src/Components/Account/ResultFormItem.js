@@ -1,10 +1,13 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { Button } from "reactstrap";
 
 function ResultFormItem(props) {
-  let { listAccount } = props;
+  // let { listAccount } = props;  // Đang được lấy từ state trên Container
+  let stateRedux = useSelector((state) => state);
+  let listAccount_redux = stateRedux.account_root.listAccount;
   // Hiển thị dữ liệu: sử dụng vòng lặp map(account, index)  ==> tạo ra 1 mảng mới từ mảng ban đầu
-  let items = listAccount.map((account, index) => {
+  let items = listAccount_redux.map((account, index) => {
     return (
       <tr>
         <td>{account.id}</td>
