@@ -8,7 +8,10 @@ import { getListDepartmentAPI } from "../API/Department";
 import { getListPositionAPI } from "../API/PositionAPI";
 import { useDispatch } from "react-redux";
 import { actionCloseForm, actionShowForm } from "../Redux/Actions/FormAction";
-import { actionFetchListAccoutAPI } from "./../Redux/Actions/AccountAction";
+import {
+  actionAddNewAccountAPI,
+  actionFetchListAccoutAPI,
+} from "./../Redux/Actions/AccountAction";
 import { actionFetchListDepartmentAPI } from "../Redux/Actions/DepartmentAction";
 import { actionFetchListPositionAPI } from "../Redux/Actions/PositionAction";
 
@@ -43,16 +46,17 @@ function AccountContainer(props) {
     // console.log("account_New: ", account_New);
     // listAccount.push(account_New);
     // setListAccount(listAccount);
-
     // Lưu listAccount xuống LocalStorage
     // localStorage.setItem("listAccount", JSON.stringify(listAccount));
     // Đóng form thêm mới
-    createNewAccountAPI(account_New).then(() => {
-      getListAccountAPI().then((res) => {
-        setListAccount(res);
-      });
-    });
+    // createNewAccountAPI(account_New).then(() => {
+    //   getListAccountAPI().then((res) => {
+    //     setListAccount(res);
+    //   });
+    // });
     // setShowForm(false);
+    dispatchRedux(actionAddNewAccountAPI(account_New));
+    dispatchRedux(actionCloseForm());
   };
 
   //

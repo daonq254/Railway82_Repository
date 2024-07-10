@@ -16,6 +16,15 @@ let accountReducer = (state = initialstate, action) => {
         listAccount: listAccountAPI,
       };
 
+    // case ADD_NEW_ACCOUNT:
+    //   let accountNew = action.payload;
+    //   let listAccount_new = state.listAccount;
+    //   listAccount_new.push(accountNew);
+    //   return {
+    //     ...state,
+    //     listAccount: listAccount_new,
+    //   };
+
     default:
       return {
         ...state,
